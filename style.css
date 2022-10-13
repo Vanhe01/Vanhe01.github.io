@@ -1,0 +1,237 @@
+/* Schrift */
+
+/* alegreya-sans-regular - latin */
+@font-face {
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url(fonts/alegreya-sans-v21-latin-regular.woff2) format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url(fonts/alegreya-sans-v21-latin-regular.woff) format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+/* Webseite */
+
+html {
+    height: 100%
+}
+
+
+/* Body Design */
+
+body {
+    text-align: center;
+    font: 20px "Alegreya Sans";
+    line-height: 1.6;
+    margin: 2% 5%;
+    color: #000;
+
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Bild Startseite positionieren */
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Ausklappbare Boxen */
+
+details {
+    text-align: center;
+    background-color: #fcf8f3;
+    padding: 1rem;
+    border: 1px solid lightgray;
+    margin-bottom: 1rem;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+
+/* Textblöcke */
+
+p {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+/* Überschriften */
+
+h1,h2,h3 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+h2,h3 {
+    font-weight: bolder;
+}
+
+
+/* Link Styling (noch sehr ausbaufähig) */
+
+/* Positionierung */
+
+.link {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Einzelne Links Design */
+
+.link a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 0 15px 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Hover-Effekt */
+
+.link a:hover {
+    text-decoration: underline;
+    background-color: #fcf8f3;
+}
+
+
+/* Navigation */
+
+/* Hintergrund und Schrift */
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: blanchedalmond;
+    font: 20px "Alegreya Sans";
+    margin-bottom: 20px;
+}
+
+/* Header sichtbar machen*/
+
+header::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Liste/Links Design */
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    margin-right: 50px;
+    padding-top: 25px;
+    padding-bottom: 18px;
+
+    position: relative;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+/* Hover-Effekt */
+
+nav a:hover {
+    color: #000;
+}
+
+nav a::before{
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: #000;
+
+    position: absolute;
+    top: 0;
+    width: 0;
+
+    transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before{
+    width: 100%
+}
+
+/*Footer*/
+
+/* Hintergrund Design */
+
+footer {
+    padding: 40px 0;
+    background-color: blanchedalmond;
+
+    margin-top: auto;
+}
+
+/* Liste/Links Design */
+
+footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 0 15px
+
+}
+
+footer ul li a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8
+}
+
+/* Hover-Effekt */
+
+footer ul li a:hover {
+    opacity: 3;
+}
+
+/* Copyright Text Design */
+
+footer p {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: inherit;
+}
+
